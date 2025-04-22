@@ -30,7 +30,7 @@ const Career = () => {
           <header
             className="relative text-center py-16 bg-cover bg-center transition-all duration-300 hover:bg-opacity-90"
             style={{
-              backgroundImage: "url('/src/assets/images/kidcoding.jpg')",
+              backgroundImage: "url('/images/kidcoding.jpg')",
               backgroundColor: "#49BBBD", // fallback nếu ảnh lỗi
               height: "500px",
               backgroundSize: "cover",
@@ -88,7 +88,7 @@ const Career = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src="/src/assets/images/programming.png"
+                    src="/images/programming.png"
                     alt="Programming"
                     className="w-24 mx-auto mb-4"
                   />
@@ -111,7 +111,7 @@ const Career = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <img
-                    src="/src/assets/images/developer.png"
+                    src="/images/developer.png"
                     alt="Teaching"
                     className="w-24 mx-auto mb-4"
                   />
@@ -134,7 +134,7 @@ const Career = () => {
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   <img
-                    src="/src/assets/images/upward.png"
+                    src="/images/upward.png"
                     alt="Growth"
                     className="w-24 mx-auto mb-4"
                   />
@@ -170,7 +170,7 @@ const Career = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src="/src/assets/images/coding.png"
+                    src="/images/coding.png"
                     alt="Scratch"
                     className="w-12 mr-4"
                   />
@@ -200,7 +200,7 @@ const Career = () => {
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   <img
-                    src="/src/assets/images/email.png"
+                    src="/images/email.png"
                     alt="Python"
                     className="w-12 mr-4"
                   />

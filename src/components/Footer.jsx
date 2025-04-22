@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container mx-auto px-6 max-w-4xl">
         {/* Logo & Text */}
         <div className="flex flex-col items-center justify-center mb-6">
-          <img src="/src/assets/images/logo.jpg" className="w-12 h-12 mb-2" />
+          <img src="/images/logo.jpg" className="w-12 h-12 mb-2" />
           <div className="text-white text-base font-medium">
             Virtual Class for Zoom
           </div>

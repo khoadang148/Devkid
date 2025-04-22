@@ -5,33 +5,33 @@ import { motion } from "framer-motion";
 const Blog = () => {
   const location = useLocation();
   const trendingPosts = [
-    { id: 1, image: "/src/assets/images/blog.jpg", title: "Vue" },
-    { id: 2, image: "/src/assets/images/blog.jpg", title: "React" },
-    { id: 3, image: "/src/assets/images/blog.jpg", title: "JavaScript" },
-    { id: 4, image: "/src/assets/images/blog.jpg", title: "TypeScript" },
+    { id: 1, image: "/images/blog.jpg", title: "Vue" },
+    { id: 2, image: "/images/blog.jpg", title: "React" },
+    { id: 3, image: "/images/blog.jpg", title: "JavaScript" },
+    { id: 4, image: "/images/blog.jpg", title: "TypeScript" },
   ];
 
   const featuredPosts = [
     {
       id: 1,
-      image: "/src/assets/images/blog2.jpg",
+      image: "/images/blog2.jpg",
       title:
         "Class adds $75 million to its balance sheet for a fresh funding round",
       author: {
         name: "John Doe",
-        avatar: "/src/assets/images/avatar1.jpg",
+        avatar: "/images/avatar1.jpg",
       },
       date: "MAR 25,2023",
       readTime: "5 MIN READ",
     },
     {
       id: 2,
-      image: "/src/assets/images/blog2.jpg",
+      image: "/images/blog2.jpg",
       title:
         "Class adds $75 million to its balance sheet for a fresh funding round",
       author: {
         name: "Jane Smith",
-        avatar: "/src/assets/images/avatar1.jpg",
+        avatar: "/images/avatar1.jpg",
       },
       date: "MAR 25,2023",
       readTime: "5 MIN READ",
@@ -41,11 +41,11 @@ const Blog = () => {
   const marketingArticles = [
     {
       id: 1,
-      image: "/src/assets/images/blog2.jpg",
+      image: "/images/blog2.jpg",
       title: "AWS Certified solutions Architect",
       author: {
         name: "John Doe",
-        avatar: "/src/assets/images/avatar1.jpg",
+        avatar: "/images/avatar1.jpg",
       },
       date: "MAR 25,2023",
     },
@@ -92,7 +92,7 @@ const Blog = () => {
         <div className="bg-white p-6 rounded-lg shadow-sm">
           <div className="flex items-center mb-4">
             <img
-              src="/src/assets/images/avatar1.jpg"
+              src="/images/avatar1.jpg"
               alt="Author"
               className="w-8 h-8 rounded-full"
             />

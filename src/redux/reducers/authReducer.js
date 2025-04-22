@@ -4,9 +4,21 @@ import {
   UPDATE_USER_SUCCESS,
 } from "../actions/auth/authActions";
 
+// Hàm kiểm tra và parse dữ liệu từ localStorage
+const parseData = (key) => {
+  const data = localStorage.getItem(key);
+  try {
+    return data ? JSON.parse(data) : null; // Nếu có dữ liệu thì parse, nếu không thì trả về null
+  } catch (e) {
+    console.error(`Error parsing ${key} from localStorage`, e);
+    return null; // Trả về null nếu gặp lỗi khi parse
+  }
+};
+
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null,
-  tokens: JSON.parse(localStorage.getItem("tokens")) || {
+  // Sử dụng hàm parseData để lấy dữ liệu từ localStorage và đảm bảo không có lỗi
+  user: parseData("user"),
+  tokens: parseData("tokens") || {
     accessToken: null,
     refreshToken: null,
   },
@@ -29,8 +41,12 @@ const authReducer = (state = initialState, action) => {
       const { user, tokens } = action.payload;
 
       // Lưu vào localStorage khi đăng nhập thành công
-      localStorage.setItem("user", JSON.stringify(user));
-      localStorage.setItem("tokens", JSON.stringify(tokens));
+      try {
+        localStorage.setItem("user", JSON.stringify(user));
+        localStorage.setItem("tokens", JSON.stringify(tokens));
+      } catch (e) {
+        console.error("Error saving data to localStorage", e);
+      }
 
       const newState = {
         ...state,
@@ -54,8 +70,12 @@ const authReducer = (state = initialState, action) => {
 
     case "LOGOUT":
       // Xóa tất cả thông tin người dùng khi logout
-      localStorage.removeItem("user");
-      localStorage.removeItem("tokens");
+      try {
+        localStorage.removeItem("user");
+        localStorage.removeItem("tokens");
+      } catch (e) {
+        console.error("Error removing data from localStorage", e);
+      }
 
       return {
         ...initialState, // Reset state về ban đầu
@@ -64,6 +84,7 @@ const authReducer = (state = initialState, action) => {
 
     case UPDATE_USER_REQUEST:
       return { ...state, loading: true, error: null };
+
     case UPDATE_USER_SUCCESS:
       return {
         ...state,

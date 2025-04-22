@@ -91,7 +91,7 @@ const Header = () => {
       <div className="container mx-auto flex items-center justify-between py-4 px-6">
         <div className="flex items-center">
           <img
-            src="/src/assets/images/logo.jpg"
+            src="/images/logo.jpg"
             className="w-full h-16 rounded-lg"
             alt="Dev Kid Logo"
           />
@@ -130,7 +130,7 @@ const Header = () => {
         <div className="flex items-center space-x-4">
           <Link to="/cart" className="text-white hover:text-gray-900">
             <img
-              src="/src/assets/images/shopping-cart.png"
+              src="/images/shopping-cart.png"
               alt="History"
               className="w-8 h-8"
             />
@@ -161,7 +161,7 @@ const Header = () => {
           title={
             <div className="flex flex-col items-center">
               <img
-                src="/src/assets/images/logo.jpg"
+                src="/images/logo.jpg"
                 alt="Logo"
                 className="w-16 h-16 mb-2"
               />

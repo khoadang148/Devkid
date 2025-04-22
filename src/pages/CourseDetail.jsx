@@ -41,7 +41,7 @@ const CourseDetail = () => {
     {
       id: 1,
       author: "Lina",
-      avatar: "/src/assets/images/avatar1.jpg",
+      avatar: "/images/avatar1.jpg",
       time: "3 tháng trước",
       comment:
         "Khóa học rất hay và dễ hiểu. Giảng viên nhiệt tình, tài liệu đầy đủ...",
@@ -49,7 +49,7 @@ const CourseDetail = () => {
     {
       id: 2,
       author: "Lisa",
-      avatar: "/src/assets/images/avatar1.jpg",
+      avatar: "/images/avatar1.jpg",
       time: "3 tháng trước",
       comment:
         "Nội dung được trình bày rõ ràng, dễ hiểu. Rất phù hợp cho người mới bắt đầu...",
@@ -112,7 +112,7 @@ const CourseDetail = () => {
   const course = {
     title: courseDetail.name || "Khóa học không có tiêu đề",
     description: courseDetail.description || "Không có mô tả",
-    imageUrl: courseDetail.imageUrl || "/src/assets/images/course3.jpg",
+    imageUrl: courseDetail.imageUrl || "/images/course3.jpg",
     price: courseDetail.price || 0,
     originalPrice: courseDetail.price * 2 || 2380000,
     discount: courseDetail.discount || "Giảm 50%",

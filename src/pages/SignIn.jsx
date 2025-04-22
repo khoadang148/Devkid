@@ -43,7 +43,7 @@ const SignIn = () => {
     <div className="min-h-screen flex">
       <div className="w-1/2 hidden md:block">
         <img
-          src="src/assets/images/login.jpg"
+          src="/images/login.jpg"
           className="w-full h-screen object-cover"
           alt="Login"
         />

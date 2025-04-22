@@ -51,7 +51,7 @@ const AboutUs = () => {
     >
       <header className="relative h-64 overflow-hidden">
         <img
-          src="/src/assets/images/aboutus.jpg"
+          src="/images/aboutus.jpg"
           alt="About Us"
           className="w-full h-full object-cover"
         />
@@ -83,7 +83,7 @@ const AboutUs = () => {
       <div className="max-w-6xl mx-auto grid grid-cols-1 gap-6 p-6">
         <div className="bg-[#EBF5FF] p-4 rounded-lg shadow-lg flex">
           <img
-            src="/src/assets/images/abt1.jpg"
+            src="/images/abt1.jpg"
             alt="Small 1"
             className="w-1/3 h-auto mr-4"
           />
@@ -102,7 +102,7 @@ const AboutUs = () => {
         </div>
         <div className="bg-[#EBF5FF] p-4 rounded-lg shadow-lg flex">
           <img
-            src="/src/assets/images/abt2.jpg"
+            src="/images/abt2.jpg"
             alt="Small 2"
             className="w-1/3 h-auto mr-4"
           />
@@ -121,7 +121,7 @@ const AboutUs = () => {
         </div>
         <div className="bg-[#EBF5FF] p-4 rounded-lg shadow-lg flex">
           <img
-            src="/src/assets/images/abt3.jpg"
+            src="/images/abt3.jpg"
             alt="Small 3"
             className="w-1/3 h-auto mr-4"
           />
@@ -145,7 +145,7 @@ const AboutUs = () => {
           <Slider {...settings} className="mt-6">
             <div className="p-4">
               <img
-                src="/src/assets/images/teacher1.jpg"
+                src="/images/teacher1.jpg"
                 alt="Teacher 1"
                 className="w-full h-auto rounded-lg"
               />
@@ -153,7 +153,7 @@ const AboutUs = () => {
             </div>
             <div className="p-4">
               <img
-                src="/src/assets/images/teacher2.jpg"
+                src="/images/teacher2.jpg"
                 alt="Teacher 2"
                 className="w-full h-auto rounded-lg"
               />
@@ -161,7 +161,7 @@ const AboutUs = () => {
             </div>
             <div className="p-4">
               <img
-                src="/src/assets/images/teacher3.jpg"
+                src="/images/teacher3.jpg"
                 alt="Teacher 3"
                 className="w-full h-auto rounded-lg"
               />
@@ -175,7 +175,7 @@ const AboutUs = () => {
           <div className="flex justify-around max-w-6xl mx-auto">
             <div className="p-4">
               <img
-                src="/src/assets/images/learning.jpg"
+                src="/images/learning.jpg"
                 alt="Personalized learning"
                 className="w-16 h-16 mx-auto"
               />
@@ -187,7 +187,7 @@ const AboutUs = () => {
             </div>
             <div className="p-4">
               <img
-                src="/src/assets/images/trust.jpg"
+                src="/images/trust.jpg"
                 alt="Trusted content"
                 className="w-16 h-16 mx-auto"
               />
@@ -200,7 +200,7 @@ const AboutUs = () => {
             </div>
             <div className="p-4">
               <img
-                src="/src/assets/images/empower.png"
+                src="/images/empower.png"
                 alt="Tools to empower teachers"
                 className="w-16 h-16 mx-auto"
               />

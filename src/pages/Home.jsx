@@ -1,10 +1,5 @@
-import {
-  FaCalendarCheck,
-  FaFileInvoiceDollar,
-  FaUsers,
-  
-} from "react-icons/fa";
-import studentImg from "../assets/images/student.jpg";
+import { FaCalendarCheck, FaFileInvoiceDollar, FaUsers } from "react-icons/fa";
+
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -94,7 +89,7 @@ const Home = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <img
-              src={studentImg}
+              src="/images/student.jpg"
               alt="Student"
               className="w-72 rounded-lg shadow-2xl"
             />

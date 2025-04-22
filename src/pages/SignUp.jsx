@@ -1,9 +1,10 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { register } from "../redux/actions/auth/authActions";
-import { Spin, message } from "antd";
+import { message, Spin } from "antd";
 import "antd/dist/reset.css"; // Import antd CSS
+import Swal from "sweetalert2"; // Import SweetAlert2
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -11,12 +12,11 @@ const SignUp = () => {
     password: "",
     fullName: "",
     phoneNumber: "",
-    avatarUrl: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [loginLoading, setLoginLoading] = useState(false);
-  const [errors, setErrors] = useState({}); // Thêm state để lưu trữ lỗi
+  const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -26,7 +26,6 @@ const SignUp = () => {
       ...prev,
       [name]: value,
     }));
-    // Xóa lỗi của trường khi người dùng bắt đầu nhập lại
     if (errors[name]) {
       setErrors((prev) => ({
         ...prev,
@@ -52,10 +51,15 @@ const SignUp = () => {
     } catch (error) {
       setLoading(false);
       if (error.response && error.response.status === 400) {
-        // Giả sử error.response.data chứa JSON như bạn cung cấp
         const validationErrors = error.response.data.errors;
         setErrors(validationErrors);
-        message.error("Vui lòng kiểm tra lại thông tin đăng ký!");
+        // Hiển thị lỗi với SweetAlert
+        Swal.fire({
+          icon: "error",
+          title: "Đăng ký thất bại!",
+          text: "Vui lòng kiểm tra lại thông tin đăng ký.",
+          footer: '<a href="#">Click để xem chi tiết lỗi</a>',
+        });
       } else {
         message.error("Đăng ký thất bại, vui lòng thử lại!");
       }
@@ -75,7 +79,7 @@ const SignUp = () => {
       {/* Left side - Image */}
       <div className="w-1/2">
         <img
-          src="/src/assets/images/login.jpg"
+          src="/images/login.jpg"
           className="w-full h-screen object-cover"
           alt="Login"
         />
